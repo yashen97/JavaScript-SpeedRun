@@ -25,7 +25,7 @@ var collection={
 }
 
 //keep a copy of the collection for tests
-var collectionCopy=JSON.parse(JSON.stringify(collection));
+//var collectionCopy=JSON.parse(JSON.stringify(collection));
 
 //Only change code below this line
 
@@ -40,14 +40,13 @@ function updateRecoeds(id,prop,value) {
         collection[id][prop]=collection[id][prop] ||[];
         collection[id][prop].push(value);
     }else{
-        collection.id.prop=value;
+        collection[id][prop]=value;
     }
 
     return collection;
     
-}
+} 
 
-console.log(updateRecoeds("123","tracks","make it rain"));
-
+console.log(updateRecoeds("789","artist","test"));
 
 
